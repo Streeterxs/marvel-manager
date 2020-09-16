@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ListComponent } from './list.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
+import { ListRoutingModule } from './list-routing.module';
+import { ListComponent } from './list.component';
 
 
 @NgModule({
   declarations: [ListComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    ListRoutingModule,
+    MatGridListModule
   ]
 })
 export class ListModule { }

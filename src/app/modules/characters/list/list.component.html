@@ -1,1 +1,7 @@
-<p>list works!</p>
+<mat-grid-list cols="6" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let character of characters">
+        <mat-card class="grid-cards">
+            <img mat-card-image [src]="character.thumbnail.path + '.' + character.thumbnail.extension">
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
