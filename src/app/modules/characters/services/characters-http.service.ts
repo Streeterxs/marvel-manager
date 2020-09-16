@@ -19,6 +19,6 @@ export class CharactersHttpService {
 
     return this.http.get<ICharacterDataContainer>(
       `${environment.marvel_api}/${environment.marvel_api_versionv1}/public/characters`,
-      {params: {apiKey: `${environment.marvel_api_key}`}}).pipe(map(charactersContainer => charactersContainer.data.result));
+      {params: { apikey: `${environment.marvel_api_key}`, ...environment.generateHash() }}).pipe(map(charactersContainer => charactersContainer.data.results));
   }
 }

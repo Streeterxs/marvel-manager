@@ -5,5 +5,5 @@ export interface ICharacterDataWrapper {
     limit: number;
     total: number;
     count: number;
-    result: ICharacter[];
+    results: ICharacter[];
 }
